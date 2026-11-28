@@ -16,7 +16,7 @@ config ZMK_SPLIT
     default y
 
 
-if ZMK_DISPLAY
+if ZMK_DISPLAY && !SHIELD_NICE_VIEW_ADAPTER && !SHIELD_NICE_EPAPER
 
 config I2C
     default y
@@ -24,9 +24,9 @@ config I2C
 config SSD1306
     default y
 
-endif # ZMK_DISPLAY
+endif # ZMK_DISPLAY && !SHIELD_NICE_VIEW_ADAPTER && !SHIELD_NICE_EPAPER
 
-if LVGL
+if LVGL && !SHIELD_NICE_EPAPER
 
 config LV_Z_VDB_SIZE
     default 64
@@ -41,6 +41,6 @@ choice LV_COLOR_DEPTH
     default LV_COLOR_DEPTH_1
 endchoice
 
-endif # LVGL
+endif # LVGL && !SHIELD_NICE_EPAPER
 
 endif

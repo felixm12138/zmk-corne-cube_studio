@@ -5,7 +5,7 @@ on:
   push:               # automatically run on changes to following paths
     paths:
       - "config/corne_c.keymap"
-      - "board/shields/corne_c/corne_c.dtsi"
+      - "boards/shields/corne_c/corne_c.dtsi"
       - "keymap_drawer.config.yaml"
       # - 'boards/*/*/*.keymap'
 
